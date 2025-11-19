@@ -110,16 +110,32 @@ document.addEventListener('DOMContentLoaded', () => {
     menuOverlay.addEventListener('click', closeMenu);
   }
 
-  // ===== Язык =====
-  // берём язык из localStorage или ru по умолчанию
-  let currentLang = localStorage.getItem('bktLang') || 'en';
-  if (!window.langCommon || !window.langCommon[currentLang]) {
-    currentLang = 'en';
+
+
+   // ===== Язык =====
+  // пытаемся получить язык из localStorage
+  let currentLang = localStorage.getItem('bktLang');
+  
+  // если языка нет или он неправильный → ставим дефолт EN
+  if (!currentLang || !window.langCommon[currentLang]) {
+    currentLang = 'en';   // ← английский как язык по умолчанию
+    localStorage.setItem('bktLang', currentLang);
   }
-
-
+  
   // первая отрисовка языка
   applyLanguage(currentLang);
+  
+  // обработчики кнопок смены языка
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      if (!lang || !window.langCommon[lang]) return;
+  
+      localStorage.setItem('bktLang', lang);
+      applyLanguage(lang);
+    });
+  });
+  
 
   // обработчики кнопок смены языка
   document.querySelectorAll('.lang-btn').forEach(btn => {
