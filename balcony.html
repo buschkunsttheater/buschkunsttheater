@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="BuschKunstTheater, zauberberg, immersive theater, theater-promenade, site-specific theater, berlin promenade">
+  <meta name="description" content="The art of wrapping on a single balcony, by Voznesensky, Yeliseev, and Petrunenko.">
+  <title>ОБЫЧНЫЙ БАЛКОН | BuschKunstTheater</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/common.css">
+  <link rel="stylesheet" href="./styles/balcony.css">  
+</head>
+
+<body>
+  <!-- Hamburger Menu -->
+  <button class="hamburger" aria-label="Меню" id="hamburgerBtn">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+  </button>
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <nav class="side-menu" id="sideMenu" aria-label="Меню">
+    <button class="close-menu" id="closeMenuBtn" aria-label="Закрыть меню">&times;</button>
+    <a href="index.html" class="menu-link" id="mainLink">Главная</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a href="tempelhof.html" class="menu-link" id="tempelhofLink">Большое Спасибо</a>
+    <a href="apotheke.html" class="menu-link" id="apothekeLink">Больна и глупа?</a>
+    <a href="friedrichshain.html" class="menu-link" id="friedrichshainLink">Очистки от Корандаша</a>
+    <a href="balcony.html" class="menu-link" id="balconyLink">Обычный Балкон</a>
+    <p></p>
+    <a href="https://share.google/WUvT1i8QZns1akbLE" class="menu-link" id="pressLink">Контакты</a>
+    <a href="contacts.html" class="menu-link" id="contactsLink">Контакты</a>
+  </nav>
+
+  <a href="index.html" class="header-link">
+    <div class="header">
+      <div class="bkt-title" id="headerTitle">BuschKunstTheater</div>
+      <div class="bkt-subtitle" id="headerSubtitle">UberZauberBerg</div>
+      <svg class="mountain-hr" viewBox="0 0 420 17">
+        <path d="M0 10 Q120 0 180 10 Q210 17 240 7 Q280 1 420 10"
+              stroke="#444" stroke-width="3.5" fill="none"/>
+      </svg>
+    </div>
+  </a>
+
+  <main>
+    <div class="site-title" id="balconyTitle">ОБЫЧНЫЙ БАЛКОН</div>
+    <div class="instruction" id="instructionText">
+      По этому контакту: ……..      свяжитесь с этим незнакомым вам человеком. Договоритесь о времени посещения. Придите в гости к незнакомому человеку. Выйдите на его балкон. Залезьте в спальный мешок и сядьте на стул. Сидите 15 минут обозревая окрестности. Покиньте стул, спальный мешок и квартиру. Выйдите на улицу. Глубоко вздохните и прочитайте текст:
+    </div>
+    <button class="dropdown-btn" id="textBtn1">ТЕКСТ 1</button>
+    <div class="dropdown-content" id="textContent1"></div>
+    <button class="dropdown-btn" id="textBtn2">ТЕКСТ 2</button>
+    <div class="dropdown-content" id="textContent2"></div>
+    <button class="dropdown-btn" id="textBtn3">ТЕКСТ 3</button>
+    <div class="dropdown-content" id="textContent3"></div>
+  </main>
+
+  <script src="./js/balcony.js"></script>
+  <script src="./js/common.js"></script>
+</body>
+
+</html>

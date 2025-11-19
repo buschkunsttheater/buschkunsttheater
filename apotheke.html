@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+   <meta name="keywords" content="BuschKunstTheater, zauberberg, immersive theater, theater-promenade, site-specific theater, berlin promenade">
+   <meta name="description" content="Care for the audience by BuschKunstTheater director Vsevolod Lisovsky.">
+
+  <title>БОЛЬНА И ГЛУПА? | BuschKunstTheater</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="./styles/common.css">
+  <link rel="stylesheet" href="./styles/apotheke.css">  
+</head>
+
+<body>
+  <!-- Hamburger Menu -->
+  <button class="hamburger" aria-label="Меню" id="hamburgerBtn">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+  </button>
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <nav class="side-menu" id="sideMenu" aria-label="Меню">
+    <button class="close-menu" id="closeMenuBtn" aria-label="Закрыть меню">&times;</button>
+    <a href="index.html" class="menu-link" id="mainLink">Главная</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a href="tempelhof.html" class="menu-link" id="tempelhofLink">Большое Спасибо</a>
+    <a href="apotheke.html" class="menu-link" id="apothekeLink">Больна и глупа?</a>
+    <a href="friedrichshain.html" class="menu-link" id="friedrichshainLink">Очистки от Корандаша</a>
+    <a href="balcony.html" class="menu-link" id="balconyLink">Обычный Балкон</a>
+    <p></p>
+    <a href="https://share.google/WUvT1i8QZns1akbLE" class="menu-link" id="pressLink">Контакты</a>
+    <a href="contacts.html" class="menu-link" id="contactsLink">Контакты</a>
+  </nav>
+
+  
+  <a href="index.html" class="header-link">
+    <div class="header">
+      <div class="bkt-title" id="headerTitle">BuschKunstTheater</div>
+      <div class="bkt-subtitle" id="headerSubtitle">UberZauberBerg</div>
+      <svg class="mountain-hr" viewBox="0 0 420 17">
+        <path d="M0 10 Q120 0 180 10 Q210 17 240 7 Q280 1 420 10"
+              stroke="#444" stroke-width="3.5" fill="none"/>
+      </svg>
+    </div>
+  </a>
+  
+  <main>
+    <div class="site-title" id="apothekeTitle">БОЛЬНА И ГЛУПА?</div>
+    <div class="map" id="map"></div>
+    <div class="instruction" id="instructionText">
+      Зайдите в аптеку из этого списка (или любую другую). Скажите провизору что плохо себя чувствуете и попросите померять свое артериальное давление. 
+      Запомнив результат измерения, выйдите из аптеки отойдите от нее на 50 метров и прочитайте этот текст:
+    </div>
+    <button class="dropdown-btn" id="textBtn">ТЕКСТ</button>
+    <div class="dropdown-content" id="textContent">
+За нашим столом тоже сидит такая дама… фрау Штёр – вы, наверно, ее видели… Она убийственно невежественна, иной раз просто не знаешь, куда глаза девать, когда она заводит свои дурацкие разговоры. И притом жалуется, что у нее температура и уж такая, такая вялость! И она действительно тяжело больна. Как странно – больна и глупа. Не знаю, понятна ли моя мысль, но если человек глуп, да в придачу еще болен – это на меня как-то особенно действует, такое сочетание, наверно, самая печальная вещь на свете. И совершенно не знаешь, как быть: ведь к больному надо относиться серьезно и с уважением, болезнь – это ведь что-то почтенное, если мне позволено будет так выразиться.
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="./js/common.js" defer></script>
+  <script src="./js/apotheke.js" defer></script>
+</body>
+</html>
