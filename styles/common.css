@@ -1,0 +1,172 @@
+/* ===== Base ===== */
+html, body { background:#fff; margin:0; padding:0; }
+body { font-family:'Source Serif 4', serif; color:#555; }
+
+/* ===== Header / Titles ===== */
+.header { max-width:480px; margin:0 auto; padding:1.2em 1em 0.7em 1em; }
+
+.bkt-title {
+  font-family:'Source Serif 4', serif;
+  font-size:1.09em;
+  font-weight:600;
+  letter-spacing:0.07em;
+  color:#444;            /* дефолт, можно переопределять */
+  margin:0 0 0.2em 0;
+  text-align:center;
+}
+
+.bkt-subtitle {
+  font-family:'Source Serif 4', serif;
+  font-size:1.6em;
+  font-weight:700;
+  letter-spacing:0.09em;
+  color:#444;            /* дефолт, можно переопределять */
+  margin:0 0 0.8em 0;
+  text-align:center;
+}
+
+/* Mountain HR (общие свойства + модификаторы высоты) */
+.mountain-hr { display:block; margin:0.7em auto 1.3em auto; width:100%; max-width:420px; }
+.mountain-hr--s { height:17px; }
+.mountain-hr--m { height:30px; }
+.mountain-hr--l { height:32px; }
+
+/* ===== Main container ===== */
+main { max-width:480px; margin:0 auto; padding:1.5em 1em 2em 1em; } /* дефолт: 1.5em */
+.main--compact { padding:1em 1em 2em 1em; } /* как на index */
+
+/* ===== Dropdown / Accordion ===== */
+.dropdown-btn {
+  width:100%; background:#fff; border:2px solid #111; border-radius:11px;
+  color:#111; font-size:1.1em; font-family:'Source Serif 4', serif; font-weight:600; letter-spacing:0.01em;
+  padding:0.8em 1.3em; margin-bottom:0.7em; cursor:pointer;
+  transition:background 0.14s, color 0.14s, border 0.14s;
+  text-align:left; position:relative;
+}
+.dropdown-btn:after {
+  content:""; position:absolute; right:1.2em; top:50%; transform:translateY(-50%) rotate(45deg);
+  border:solid #111; border-width:0 2px 2px 0; padding:5px; transition:0.16s;
+}
+.dropdown-btn.open:after { transform:translateY(-50%) rotate(-135deg); }
+
+.dropdown-content {
+  display:none; background:#f9f9f9; border:1px solid #ddd; border-radius:10px;
+  margin-bottom:1.1em; box-shadow:0 1px 6px #0002; padding:1em 1.2em;
+  font-size:1.09em; font-family:'Source Serif 4', serif; color:#555; line-height:1.55; white-space:pre-line;
+}
+.dropdown-content.open { display:block; animation:fadeIn 0.22s; }
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+/* ===== Lang switch ===== */
+.lang-switch { display:flex; gap:0.5em; margin-bottom:1.3em; }
+.lang-btn {
+  background:#fff; border:2px solid #222; color:#222; border-radius:7px;
+  font-size:1em; font-family:'Source Serif 4', serif; padding:0.27em 1em; font-weight:500; cursor:pointer;
+  transition:background 0.16s, color 0.16s, border 0.16s; outline:none;
+}
+.lang-btn.active, .lang-btn:focus { background:#111; color:#fff; border-color:#111; }
+
+/* ===== Hamburger / Side menu ===== */
+.hamburger {
+  position:fixed; top:1.2em; left:1.2em; z-index:110;
+  width:2.4em; height:2.4em; display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+  background:none; border:none; cursor:pointer; padding:0;
+}
+.hamburger-bar { width:30px; height:4px; background:#111; margin:4px 0; border-radius:2px; transition:all 0.3s; }
+
+.menu-overlay {
+  position:fixed; top:0; left:0; width:100vw; height:100vh;
+  background:rgba(34,34,34,0.11); z-index:99; display:none;
+  z-index: 10000; 
+}
+.menu-overlay.open { display:block; }
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  max-width: 320px;
+  height: 100vh;
+
+  background: #fff;
+  box-shadow: 2px 0 28px #1112;
+  z-index: 120;
+
+  padding: 2.5em 1.5em 1.2em 1.5em;
+  box-sizing: border-box;
+
+  transform: translateX(-105%);
+  transition: transform 0.22s cubic-bezier(.4,1.2,.7,1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.7em;         /* можно уменьшить, чтобы всё влезало */
+  overflow-y: auto;   /* если совсем не влезет — будет скролл */
+  z-index: 10001;
+}
+.side-menu.open { transform:translateX(0); }
+
+
+.menu-footer {
+  margin-top: auto;     /* прижимает к низу */
+  font-size: 0.7em;
+  color: #444;
+  line-height: 1.4;
+  padding-top: 0.8em;
+  border-top: 1px solid #ddd;
+}
+
+.menu-link {
+  font-size:1.14em; color:#111; background:#fff; border-radius:9px; padding:0.7em 1.1em;
+  text-decoration:none; font-weight:600; border:2px solid #222; margin-bottom:0.3em; display:block;
+  font-family:'Source Serif 4', serif; transition:background 0.16s, color 0.16s, border 0.16s;
+}
+.menu-link:hover, .menu-link:focus { background:#111; color:#fff; border-color:#111; }
+
+
+.close-menu {
+  position:absolute; right:0.2em; top:0.1em; background:none; border:none; font-size:2em;
+  color:#222; cursor:pointer; z-index:121;
+}
+
+/* ===== Hover unify (как у index) ===== */
+.location-btn:hover, .author-btn:hover, .author-btn:focus,
+.dropdown-btn:hover, .dropdown-btn:focus,
+.menu-link:hover, .menu-link:focus {
+  background:#111; color:#fff; border-color:#111;
+}
+
+/* ===== Media ===== */
+@media (max-width:600px) {
+  main { padding-left:0.5em; padding-right:0.5em; }
+  .header { padding-left:0.5em; padding-right:0.5em; }
+  .bkt-title { font-size:0.95em; }
+  .bkt-subtitle { font-size:1.3em; }
+  .side-menu { padding:2em 0.7em 1em 1em; }
+  .close-menu { right:1em; top:1em; }
+}
+
+
+.header-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;        
+  width: fit-content;    
+  margin: 0 auto;        
+}
+
+.site-title { font-family:'Source Serif 4',serif; font-size:1.3em; font-weight:700; text-align:center; color:#444; }
+
+.site-subtitle {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-align: center;
+  color: #444;
+  margin-top: -0.5em;
+  margin-bottom: 1.4em;
+  line-height: 1.45;
+}

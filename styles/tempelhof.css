@@ -1,0 +1,4 @@
+.mountain-hr { height:32px; } /* или .mountain-hr--l */
+.center-image { display: block; margin: 0 auto;  margin-bottom:1.4em; max-width: 100%; height: auto; }
+.map { width:100%; height:220px; border-radius:14px; border:2px solid #222; margin-bottom:1.7em; }
+.instruction { font-size:1.07em; margin-bottom:1.1em; font-family:'Source Serif 4',serif; color:#555; }
