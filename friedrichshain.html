@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="keywords" content="BuschKunstTheater, zauberberg, immersive theater, theater-promenade, site-specific theater, berlin promenade">
-  <meta name="description" content="Follow the BuschKunstTheater director Vsevolod Lisovsky">
-  <title>БОЛЬШОЕ СПАСИБО | BuschKunstTheater</title>
+  <meta name="description" content="Snow, X-ray and pencil — that results in a frottage effect following the MishMash instructions.">
+  <title>ОЧИСТКИ ОТ КАРАНДАША | BuschKunstTheater</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <link rel="stylesheet" href="./styles/common.css">
-  <link rel="stylesheet" href="./styles/tempelhof.css">
+  <link rel="stylesheet" href="./styles/friedrichshain.css">
 </head>
 
 <body>
@@ -56,19 +55,18 @@
   </a>
 
   <main>
-    <div class="site-title" id="tempelhofTitle">СЧАСТИЛИВО, И БОЛЬШОЕ СПАСИБО</div>
-    <h2 class="site-subtitle" id="tempelhofSubtitle">Всеволод Лисовский</h2>
+    <h1 class="site-title" id="friedrichshainTitle">BLEISTIFTSPANE</h1>
+    <h2 class="site-subtitle" id="friedrichshainSubTitle">МишМаш</h2>
     <div class="map" id="map"></div>
-    <img src="./images/tempelhof.jpg" alt="Tree on Tempelhof" class="center-image">
-    <div class="instruction" id="instructionText">
-      Найдите этот объект по геолокации. Когда найдете, осмотритесь кругом и прочитайте этот текст:
+    <div class="text" id="mainText_1"></div>
+    <button id="downloadBtn" class="pdf-btn">СКАЧАТЬ ИНСТРУКЦИЮ</button>
+    <div class="text" id="mainText_2"></div>
+    <div class="email" id="emailBlock">
+      <a href="mailto:buschkunst.theater@gmail.com">buschkunsttheater@gmail.com</a>
     </div>
-    <button class="dropdown-btn" id="textBtn">ТЕКСТ</button>
-    <div class="dropdown-content" id="textContent">
-Тут он увидел двух бородатых мужчин с топорами на плече, идущих ему навстречу; подойдя ближе, они стали прощаться. «Ну, счастливо и большое спасибо», – сказал один из них другому низким звучным голосом, переложил топор на другое плечо и, похрустывая иглами, начал без дороги спускаться между елями в долину. Как странно прозвучали в этом уединении слова: «Ну, счастливо и большое спасибо», – они точно сон коснулись Ганса Касторпа, который был все еще захвачен своими песнями и восхождением на крутизну. Он повторил вполголоса эти слова, пытаясь подражать гортанному наречию горца и той торжественной и нескладной манере, с какой они были произнесены; затем поднялся еще выше, ибо ему хотелось достичь границы лесов, однако, взглянув на часы, вынужден был отказаться от этого намерения.    </div>
   </main>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="./js/tempelhof.js"></script>
+  <script src="./js/friedrichshain.js"></script>
   <script src="./js/common.js"></script>
 </body>
 
